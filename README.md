@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/abdeh24/abdeh24/blob/main/mai-chan.jpeg" style="width: 25%;height: 25%; border-radius: 10px;">
+  <img src="https://avatars.githubusercontent.com/u/76890513?s=96&v=4" style="width: 25%;height: 25%; border-radius: 10px;">
   
   # Hello there! I'm Abde
   **Programmer & Game Developer**
