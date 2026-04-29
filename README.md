@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://avatars.githubusercontent.com/u/76890513?s=96&v=4" style="width: 25%;height: 25%; border-radius: 10px;">
+  <img src="https://i.pinimg.com/736x/9c/63/04/9c63047b51115fa65df802d2fe934442.jpg" style="width: 32%;height: 32%; border-radius: 10px;">
   
   # Hello there! I'm Abde
   **Programmer & Game Developer**
