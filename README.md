@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://i.pinimg.com/736x/9c/63/04/9c63047b51115fa65df802d2fe934442.jpg" style="width: 32%;height: 32%; border-radius: 10px;">
   
-  # Hello there! I'm Abde
+  # Hello there! My name is Abde
   **Programmer & Game Developer**
   
   <img src="https://count.getloli.com/@abdf?name=abdf&theme=booru-lewd&padding=5&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="Visitor Counter">
