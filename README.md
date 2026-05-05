@@ -36,6 +36,8 @@
 
 ## GitHub Statistics
 
+Sorry the Github Statistics is bugged sometime.
+
 <div align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=abdeh24&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdeh24&layout=compact&theme=dark" alt="Top Languages"/>
