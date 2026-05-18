@@ -1,0 +1,38 @@
+
+body{
+  font-family: "Monospace";
+  font-size: 3vw;
+  font-weight: bold;
+  background-color: #1e1e2e;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+hr{
+  border: solid 1px #cdd6f3;
+}
+
+footer{
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+}
+
+#container1{
+  background-color: #313244;
+  padding: 8px 4px;
+}
+
+
+#container2{
+  border: solid 1px #cdd6f3;
+  color: #cdd6f3;
+  padding: 2px 12px;
+}
+
+#button{
+  color: #1e1e2e;
+  padding: 2px 4px;
+  text-decoration: none;
+}
