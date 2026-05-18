@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.pinimg.com/736x/9c/63/04/9c63047b51115fa65df802d2fe934442.jpg" style="width: 32%;height: 32%; border-radius: 10px;">
+  <img src="mai-chan.jpeg" style="width: 32%;height: 32%; border-radius: 10px;">
   
   # Hello there! My name is Abde
   **Programmer & Game Developer**
@@ -35,10 +35,4 @@
 ---
 
 ## GitHub Statistics
-
-Sorry the Github Statistics is bugged sometime.
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=abdeh24&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdeh24&layout=compact&theme=dark" alt="Top Languages"/>
-</div>
+![Metrics](metrics.svg)
