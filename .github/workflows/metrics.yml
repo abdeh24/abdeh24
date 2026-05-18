@@ -1,18 +1,28 @@
 name: Metrics
 on:
-  schedule: [{cron: "0 0 * * *"}]
+  # This will run the workflow at 0 and 12 UTC every day
+  schedule: [{cron: "0 0,12 * * *"}]
   workflow_dispatch:
-  push: {branches: ["master", "main"]}
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
+          # Your GitHub token is needed to access your profile data
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # Basic config
+          user: abdeh24
+          template: classic
+          base: header, activity, community, repositories, coding
+          
+          # Output settings
+          filename: metrics.svg
+          
+          # Optional: customize what metrics are shown
+          config_timezone: UTC
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 0%
