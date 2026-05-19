@@ -1,51 +1,45 @@
 name: Metrics
-on:
-  # This will run the workflow once a week (every Monday at 0:00 UTC)
-  schedule: [{cron: "0 0 * * 1"}]
-  workflow_dispatch:
-  push:
-    branches:
-      - main
 
-permissions:
-  contents: write
-  
+on:
+  # Update automatically every day at midnight
+  schedule: [{cron: "0 0 * * *"}]
+  # Allow manual workflow triggers
+  workflow_dispatch:
+  # Run on pushes to the main/master branch
+  push: {branches: ["master", "main"]}
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
-      
       - uses: lowlighter/metrics@latest
         with:
-          # Your GitHub token is needed to access your profile data
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # Your GitHub Personal Access Token (PAT)
+          token: ${{ secrets.METRICS_TOKEN }}
           
-          # Basic config - show all repos from your profile
+          # Replace with your actual GitHub username
           user: abdeh24
+          
+          # Use the classic template shown in your screenshot
           template: classic
-          base: header, activity, community, repositories, coding
           
-          # Include all repositories (not limited to current repo)
-          repositories: 0
+          # Sets the timezone to match your local time (WITA/Jakarta)
+          config_timezone: Asia/Jakarta
           
-          # Output settings
-          filename: metrics.svg
+          # ---------------------------------------------------
+          # Base Sections 
+          # (Introduction, Activity, Community, All Repositories)
+          # ---------------------------------------------------
+          base: header, activity, community, repositories
           
-          # Optional: customize what metrics are shown
-          config_timezone: UTC
+          # ---------------------------------------------------
+          # Languages Plugin 
+          # (Most used languages across ALL repositories)
+          # ---------------------------------------------------
           plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_threshold: 0%
-          
-          # Show contributed repositories and personal repositories
-          plugin_repositories: yes
-          plugin_repositories_affiliations: owner, collaborator, organization_member
-          
-      - name: Commit metrics
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add metrics.svg
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update metrics"
-          git push
+          plugin_languages_limit: 8                 # Shows up to 8 languages
+          plugin_languages_sections: most-used      # Focuses on most used languages
+          plugin_languages_details: percentage      # Shows the percentage bar
+          plugin_languages_indepth: no              # Set to 'yes' for deeper analysis (slower)
