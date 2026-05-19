@@ -14,6 +14,8 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v3
+      
       - uses: lowlighter/metrics@latest
         with:
           # Your GitHub Personal Access Token (PAT)
@@ -43,3 +45,12 @@ jobs:
           plugin_languages_sections: most-used      # Focuses on most used languages
           plugin_languages_details: percentage      # Shows the percentage bar
           plugin_languages_indepth: no              # Set to 'yes' for deeper analysis (slower)
+      
+      - name: Commit metrics
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull origin main
+          git add metrics.svg
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update metrics"
+          git push origin main
