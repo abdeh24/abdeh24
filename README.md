@@ -35,4 +35,4 @@
 ---
 
 ## GitHub Statistics
-![Metrics](metrics.svg)
+![Metrics](github-metrics.svg)
